@@ -238,7 +238,7 @@ description: Use when the user discusses family finance management, investing, p
 
 - **子 Agent 路由**：`references/Agent索引.md`（含 🔴🟡🟢 优先级 + 不读后果）
 - **资产记忆**：`config/家庭资产.md`、`config/资产配置记忆.md`
-- **公司记忆**：`{你的知识库}/08-全局记忆/L4-主题记忆/02-公司研究/公司名-公司记忆.md`（唯一 canonical，`{你的知识库}/06-投资/公司分析/` 只放报告）
+- **公司记忆**：`{你的记忆库}/公司研究/公司名-公司记忆.md`（唯一 canonical，`{你的投资库}/公司分析/` 只放报告）
 - **日记**：仅在用户要求时通过 `flomo-journal-sync` 同步
 - **报告模板**：`templates/公司分析报告模板.md`
 
@@ -267,7 +267,7 @@ description: Use when the user discusses family finance management, investing, p
 - [ ] 镜子测试通过，芒格逆向 7 问完成，段永平不为清单已查
 - [ ] 反方审查三视角对抗完成，持有说明书已建立
 - [ ] 「好生意」和「好投资」已分开判断
-- [ ] ⛔ **报告已写入 `{你的知识库}/06-投资/公司分析/{公司名}/` + canonical memory 已更新**（不写 = 没做完，关闭会话后分析丢失）← **最常见漏步**
+- [ ] ⛔ **报告已写入 `{你的投资库}/公司分析/{公司名}/` + canonical memory 已更新**（不写 = 没做完，关闭会话后分析丢失）← **最常见漏步**
 
 ### 交易额外
 - [ ] 五道闸门全部通过：资金属性 / 家庭安全 / 风险桶 / 标的估值 / 执行行为
