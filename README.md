@@ -18,10 +18,17 @@ cp -R family-investment-manager ~/.agents/skills/
 
 # 方式二：项目级安装
 cp -R family-investment-manager /path/to/your/project/.claude/skills/
-
-# 首次使用：配置家庭基准（关键步骤！）
-# 按 config/README.md 说明，创建/调整你的家庭资产、宪法、IPS、配置记忆
 ```
+
+### 首次使用（自动引导，约 1 小时）
+
+安装后第一次对话，SKILL.md 的 **First-Run Gate** 会自动检测 `config/家庭资产.md` 是否还是示例（含占位符），未配置前不会给任何金额级建议，只会引导你完成配置：
+
+1. **必配**：`config/家庭资产.md`（真实资产表）、`config/家庭财务宪法.md`（重算安全垫三档）
+2. **应配**：`config/投资政策声明IPS.md`、`config/资产配置记忆.md`（目标配置表）
+3. **开箱即用**：决策检查清单、交易纪律、管理工作流
+
+详细流程见 `config/README.md`（带勾选清单）。配置完成后闸门永久关闭，进入正常使用。
 
 安装后在对话中直接说「分析一下腾讯」「我的组合怎么样」「我想买 XX」即可触发。
 
