@@ -1,6 +1,21 @@
-# Family Investment Manager — 家庭投资管理
+<p align="center">
+  <h1 align="center">💰 Family Investment Manager · 家庭投资管理</h1>
+  <p align="center">个人投资者的家庭投资管理系统 —— 家庭财务基准优先，五道闸门才给建议</p>
+</p>
 
-> 个人投资者的「家庭投资管理执行系统」——不是给你市场观点，而是以**家庭财务基准**（资产表、安全垫、IPS、风险桶）为锚点，用 1 个编排层 + 26 个专业子 Agent + 4 份投资方法论 + 9 套报告模板 + 1 个金融验算工具，把每一次投资决策变成一条有纪律、可复盘、有闸门的完整流水线。
+<p align="center">
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/version-1.1.0-green.svg" alt="Version 1.1.0">
+  <img src="https://img.shields.io/badge/format-Anthropic%20Skill-orange.svg" alt="Skill 格式">
+  <img src="https://img.shields.io/badge/agents-26%20%E5%AD%90%20Agent-8A2BE2.svg" alt="26 个子 Agent">
+  <img src="https://img.shields.io/badge/gates-%E4%BA%94%E9%81%93%E9%97%B8%E9%97%A8-red.svg" alt="五道纪律闸门">
+</p>
+
+---
+
+**家庭投资管理（Family Investment Manager）** 是一个 Agent Skill（适用于 Claude Code / Codex / VS Code Copilot 等 AI 编程助手）：以**家庭财务基准**（资产表、安全垫、IPS、风险桶）为锚点，用 1 个编排层 + 26 个专业子 Agent + 4 份投资方法论 + 9 套报告模板 + 1 个金融验算工具，把每一次投资决策变成一条有纪律、可复盘、有闸门的完整流水线——而不是给你一个没有执行含义的市场观点。
+
+> ⚠️ **任何交易建议必须通过五道闸门**：资金属性 → 家庭安全 → 风险桶 → 标的估值 → 执行行为。它不承诺收益、不构成投资建议。
 
 ## 能力总结
 

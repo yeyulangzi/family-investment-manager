@@ -1,5 +1,6 @@
 ---
 name: family-investment-manager
+version: 1.1.0
 description: Use when the user discusses family finance management, investing, portfolio, asset allocation, stocks, funds, ETFs, bonds, gold, trading, valuation, cash flow, insurance, mortgage, or financial review. Triggers on: 家庭财务、投资、资产配置、买入、卖出、加仓、减仓、持仓、股票、基金、估值、基本面、复盘、现金流、保险、房产、负债、仓位、安全边际、技术面、止损、行业、芯片、半导体、券商、配置、能买吗、现在入手、怎么样、回调、可以买吗.
 ---
 
