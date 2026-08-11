@@ -168,15 +168,19 @@ description: Use when the user discusses family finance management, investing, p
 
 ---
 
-## 数据获取优先级
+## 数据获取优先级（自动获取，无需用户配置）
 
-| 数据类型 | 优先 | 备用 |
+> 运行时不问用户要任何配置。按以下顺序自动拉取：① 检测 Python 库（akshare / yfinance）是否可用，可用则用；② 不可用 → 自动降级到**零依赖 HTTP 接口**（腾讯 qt / 东方财富，直接 curl，不需要装任何库）；③ 全部失败 → 明确告知用户数据源限制，不编造。
+> 链接：AKShare → https://github.com/akfamily/akshare ｜ yfinance → https://github.com/ranaroussi/yfinance ｜ 腾讯 qt → http://qt.gtimg.cn/q= ｜ 东方财富 → https://push2.eastmoney.com ｜ 天天基金 → https://fund.eastmoney.com
+
+| 数据类型 | 优先（自动） | 备用（自动降级） |
 |---------|------|------|
-| A 股行情/PE | 腾讯 qt | AKShare |
+| A 股行情/PE | 腾讯 qt（HTTP 零依赖） | AKShare |
 | A 股财务 | AKShare `stock_financial_abstract_ths` | 网页搜索 |
-| 基金/ETF | AKShare / ttskill | 天天基金网页 |
+| 基金/ETF | AKShare / ttskill（无则跳过） | 天天基金网页 |
 | 港美股 | yfinance | Yahoo Finance 网页 |
-| 宏观 | AKShare `macro_*` | 网页搜索 |
+| 宏观 | AKShare `macro_*` | 东方财富 datacenter |
+| 重大事件 | 网页搜索 | — |
 
 **硬规则**：PE ≥ 2 源交叉验证，优先静态/TTM；数据源全故障 → 不编造。
 **验算工具**：`python3 scripts/financial_rigor.py` — 市值验算/PE验算/多源交叉验证/三情景估值/Benford检测。禁止 AI 心算。

@@ -80,6 +80,27 @@ Family Investment Manager 起源于作者自己的真实需求：个人投资者
 
 > 资产表超过 14 天会提示，超过 30 天 Skill 会拒绝给金额级建议——这不是 bug，是设计。
 
+### 📡 数据源（自动获取，零配置）
+
+运行时**不需要你配置任何数据源**。Skill 自动执行数据拉取：优先用 Python 库（AKShare / yfinance），本机未安装时自动降级到**零依赖 HTTP 接口**（腾讯 qt / 东方财富），全程无感。
+
+| 数据 | 首选（自动） | 备用（自动降级） | 链接 |
+|------|------|------|------|
+| A 股行情/PE | 腾讯 qt（HTTP，零依赖） | AKShare | [腾讯 qt](http://qt.gtimg.cn/q=) · [AKShare](https://github.com/akfamily/akshare) |
+| A 股财务 | AKShare | 网页搜索 | [AKShare](https://github.com/akfamily/akshare) |
+| 基金/ETF | AKShare / ttskill | 天天基金网页 | [AKShare](https://github.com/akfamily/akshare) · [天天基金](https://fund.eastmoney.com) |
+| 港美股 | yfinance | Yahoo Finance 网页 | [yfinance](https://github.com/ranaroussi/yfinance) · [Yahoo Finance](https://finance.yahoo.com) |
+| 宏观 | AKShare `macro_*` | 东方财富 datacenter | [AKShare](https://github.com/akfamily/akshare) · [东方财富数据中心](https://data.eastmoney.com) |
+| 重大事件（FOMC/政治局） | 网页搜索 | — | — |
+
+**可选依赖安装**（不装也能用，会自动降级到 HTTP 接口）：
+
+```bash
+pip install akshare yfinance
+```
+
+**本地 Skill 增强（可选，未安装自动跳过）**：`ttskill`（天天基金持仓/盈亏）、`futuapi`（港美股实时，需富途 OpenD）——没有它们 Skill 会自动降级到公开数据源，不影响使用。
+
 ### 使用场景
 
 | 场景 | 说明 |
@@ -228,7 +249,7 @@ Family Investment Manager 起源于作者自己的真实需求：个人投资者
 
 - 本 Skill 不承诺收益，不构成投资建议；所有输出仅供个人决策参考，最终投资责任由使用者承担
 - 交易纪律硬规则：数据不交叉验证不下结论、安全垫不足不给买入建议、技术面不单独构成投资理由
-- 数据来源建议：A 股行情（腾讯 qt / AKShare）、港美股（yfinance）、宏观（AKShare / 东方财富）
+- 数据源：A 股行情（[腾讯 qt](http://qt.gtimg.cn/q=) / [AKShare](https://github.com/akfamily/akshare)）、港美股（[yfinance](https://github.com/ranaroussi/yfinance)）、宏观（[AKShare](https://github.com/akfamily/akshare) / [东方财富](https://data.eastmoney.com)），详见上文「数据源」小节
 - `config/家庭资产.md`、`config/资产配置记忆.md` 含真实家庭财务数据，**不要提交到公开仓库**（.gitignore 已排除）
 
 ## 开源协议
